@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="31.474">
+    <testcase classname="F01_Register | users could register with new accounts" name="guest user could register with valid data successfully" time="8.382">
+        <system-out>
+            <![CDATA[Given user go to register page..............................................passed
+When user clicks on Registration Link.......................................passed
+And user enters "Rana","Ahmed","rna@gmail.com","12345678"...................passed
+Then the registration page displayed successfully...........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="F01_Register | users could register with new accounts" name="guest user could register with valid data successfully 2" time="7.276">
+        <system-out>
+            <![CDATA[Given user go to register page..............................................passed
+When user clicks on Registration Link.......................................passed
+And user enters "Test","test2","test22@gmail.com","1234567".................passed
+Then the registration page displayed successfully...........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="F02_Login | users could use login functionality to use their accounts" name="user could login with valid email and password" time="10.146">
+        <system-out>
+            <![CDATA[Given registered user with "valid1@valid.com" and "123456" logout to go to login page.passed
+When user login with valid "valid1@valid.com" and "123456"..................passed
+Then user login to the system successfully..................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="F02_Login | users could use login functionality to use their accounts" name="user couldn't login with invalid email and password" time="5.503">
+        <failure message="expected [true] but found [false]" type="java.lang.AssertionError">
+            <![CDATA[Given user go to login page.................................................passed
+When user login with invalid "invalid@invalid.com" and "123456".............passed
+Then user could not login to the system.....................................failed
+
+StackTrace:
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at org.example.stepDefs.D02_loginStepDef.userCouldNotLoginToTheSystem(D02_loginStepDef.java:66)
+	at ✽.user could not login to the system(file:///C:/Users/DELL/IdeaProjects/demonopcommercefwd/src/main/resources/Features/F02_Login.feature:18)
+]]>
+        </failure>
+    </testcase>
+</testsuite>
